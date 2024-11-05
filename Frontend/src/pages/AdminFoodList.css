@@ -1,0 +1,60 @@
+/* src/components/AdminFoodList.css */
+.admin-food-list {
+    background-color: #fefefe; /* Light background for a clean look */
+    padding: 20px;
+    font-family: 'Arial', sans-serif; /* Change to a Japanese-style font if available */
+}
+
+h1 {
+    text-align: center;
+    color: #b30000; /* Traditional red */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #ffcccc; /* Light red */
+    color: #660000; /* Darker red for contrast */
+}
+
+tr:hover {
+    background-color: #f2f2f2; /* Light gray on hover */
+}
+
+.food-image {
+    width: 100px; /* Set a fixed size for images */
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+}
+
+button {
+    background-color: #b30000; /* Traditional red */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+button:hover {
+    background-color: #990000; /* Darker red on hover */
+}
+
+.food-image {
+    width: 150px;  /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px; /* Optional: add rounded corners */
+}

@@ -1,0 +1,55 @@
+/* Chatbot.css */
+.chatbot-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    background-color: #f9f9f9;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .chat-history {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  
+  .chat-message {
+    margin-bottom: 8px;
+  }
+  
+  .chat-message.admin {
+    text-align: right;
+    color: #000;
+  }
+  
+  .chat-message.bot {
+    text-align: left;
+    color: #888;
+  }
+  
+  .chat-input {
+    display: flex;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .chat-input button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .chat-input button:hover {
+    background-color: #0056b3;
+  }
+  

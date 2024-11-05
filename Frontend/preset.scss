@@ -1,0 +1,138 @@
+// Import Lato font
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+// Define primary colors for the theme
+$primary-color: #ff3b30; // Red for primary actions
+$secondary-color: #007bff; // Blue for secondary actions (links, headers)
+
+// Set the body font to Lato
+body, h1, h2, h3, h4, h5, h6, p, a, li {
+  font-family: 'Lato', sans-serif;
+}
+
+// Global styling for text and headers
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: $secondary-color;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+// Link styles
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a:hover {
+  color: darken($secondary-color, 10%);
+  text-decoration: underline;
+}
+
+// Button styles
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background-color: darken($primary-color, 10%);
+  border-color: darken($primary-color, 15%);
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  font-weight: 400;
+}
+
+.btn-secondary:hover {
+  background-color: lighten($secondary-color, 10%);
+  border-color: lighten($secondary-color, 15%);
+}
+
+// Navbar styling
+.navbar {
+  background-color: $secondary-color;
+}
+
+.navbar a {
+  color: #fff;
+  font-weight: 400;
+}
+
+.navbar a:hover {
+  color: lighten($primary-color, 30%);
+}
+
+// Footer customization (simplified for educational use)
+footer {
+  background-color: $secondary-color;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: #ffcccc;  // Lighter red for footer links
+}
+
+footer a:hover {
+  color: lighten($primary-color, 20%);
+}
+
+// Table styles (for courses and grades)
+table {
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+table th {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 10px;
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+// Moodle Block styles
+.block {
+  background-color: lighten($secondary-color, 30%);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.block .title {
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.block .content {
+  font-size: 1em;
+  color: #333;
+}
+
+// Forms
+input, select, textarea {
+  font-family: 'Lato', sans-serif;
+  border: 1px solid lighten($secondary-color, 30%);
+  padding: 10px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: $primary-color;
+  box-shadow: 0 0 5px rgba(255, 59, 48, 0.5);
+}

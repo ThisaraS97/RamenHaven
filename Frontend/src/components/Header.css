@@ -1,0 +1,85 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allows the search bar to move to the next line on smaller screens */
+}
+
+.header__logo img {
+  width: 100px;
+}
+
+.header__search {
+  font-family: "Harmonica Sans", sans-serif; /* Correct syntax for font-family */
+  flex-grow: 1;
+  font-weight: 400;
+  size: 14px;
+  line-height: 16px;
+  max-width: 600px;
+  padding: 0 15px;
+  margin-top: 10px;
+  width: 100%; /* Full width on smaller screens */
+}
+
+.header__search input {
+  width: 100%;
+  padding: 12px 40px 12px 20px; /* Space for the icon */
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Round edges for a softer look */
+  outline: none;
+  background-color: #f3f2f0; /* White background for the input */
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__icons .icon {
+  font-size: 20px; /* Adjust icon size */
+  cursor: pointer;
+  color: #333; /* Icon color */
+}
+
+
+.search-icon {
+  position: absolute;
+  right: 15px; /* Position the icon inside the input */
+  top: 50%; /* Center it vertically */
+  transform: translateY(-50%); /* Adjust for vertical alignment */
+  color: #aaa; /* Optional color for the icon */
+  pointer-events: none; /* Ignore pointer events on the icon */
+}
+
+.header__icons .icon:hover {
+  color: #007bff;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    align-items: center; /* Ensures logo and icons stay aligned */
+  }
+
+  .header__search {
+    order: 1; /* Ensure the search bar is moved to the second line */
+    margin-top: 10px; /* Adds spacing when search bar moves below */
+  }
+}
+
+/* Center the search bar on larger screens */
+@media (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .header__search {
+    margin: 0 auto; /* Center search bar */
+    width: auto; /* Auto width for large screens */
+  }
+}

@@ -1,0 +1,163 @@
+/* Footer.css */
+
+body {
+    font-family: "Harmonica Sans", sans-serif; /* Correct syntax for font-family */
+}
+
+footer {
+    background-color: #2e2c2d;
+    color: #fff;
+    padding: 40px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-subscribe {
+    flex: 1;
+    max-width: 220px;
+}
+
+.footer-subscribe h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.subscribe-input {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.subscribe-input input {
+    width: 150px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.subscribe-input button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+.sister-site {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Footer Links with Vertical Lines */
+.footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    position: relative;
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* Add a vertical line between each column except the last */
+.footer-column:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #444;
+}
+
+.footer-links h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: harmonia sans;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 6px;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    width: 100%; /* Ensure it takes the full width of the footer */
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between copyright and payment methods */
+    align-items: center; /* Vertically align the content in the center */
+    margin-top: 40px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer-bottom p {
+    margin: 0;
+    flex: 1; /* Ensure it takes up available space */
+    text-align: left; /* Align the text to the left */
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1; /* Ensure it takes up available space */
+}
+
+.payment-methods img {
+    width: 40px;
+    margin-left: 10px;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column; /* Stack the content vertically */
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        margin-bottom: 15px; /* Add spacing between copyright text and payment methods */
+    }
+
+    .payment-methods {
+        justify-content: center;
+    }
+}
