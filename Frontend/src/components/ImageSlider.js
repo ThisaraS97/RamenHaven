@@ -17,6 +17,8 @@ const ImageSlider = () => {
           delay: 5000, // Auto slides every 5 seconds
           disableOnInteraction: false, // Keeps autoplay running even after user interaction
         }}
+        navigation
+        pagination={{ clickable: true }}
       >
         {/* Slide 1 */}
         <SwiperSlide>

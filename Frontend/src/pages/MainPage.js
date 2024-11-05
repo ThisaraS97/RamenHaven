@@ -35,7 +35,6 @@ const MainPage = () => {
         return <div>{error}</div>;
     }
 
-    //this is comment for handleSearch
     // Handle dynamic search filtering
     const handleSearch = (query) => {
         if (query === '') {

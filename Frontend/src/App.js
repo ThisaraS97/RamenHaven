@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div>
         <Header />
-        <nav>
+       {/*} <nav>
          <ul>
             <li><a href="/login">Login</a></li>
             <li><a href="/">Home</a></li>
@@ -25,10 +25,12 @@ function App() {
             <li><a href="/login-page">Login Page</a></li>
           </ul>
          
-        </nav>
+        </nav> 
+        */}
 
         {/* Define the routes for navigation */}
         <Routes>
+          <Route path="/" element={<MainPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/add-food" element={<AddFood />} />
           <Route path="/admin-food-list" element={<AdminFoodList />} />
