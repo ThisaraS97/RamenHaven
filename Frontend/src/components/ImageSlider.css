@@ -1,81 +1,125 @@
 .image-slider-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100%; /* Centers content vertically */
+  gap: 20px;
+}
+
+.slide-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-image img {
+  max-width: 80%; /* Controls the image size */
+  height: auto;
+  border-radius: 8px;
+}
+
+.slide-text {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  color: #333;
+}
+
+.slide-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.slide-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.shop-now-button,
+.sign-up-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-button:hover,
+.sign-up-button:hover {
+  background-color: #555;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #333;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+/* Pagination dots */
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #333;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .slide-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center;
   }
-  
+
   .slide-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .slide-text {
-    flex: 1;
-    padding: 0 40px;
-    text-align: left;
-  }
-  
-  .slide-text h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-  
-  .slide-text p {
-    font-size: 1.2rem;
+    max-width: 90%;
     margin-bottom: 20px;
   }
-  
-  .shop-now-button,
-  .sign-up-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+
+  .slide-text h1 {
+    font-size: 2rem;
+  }
+
+  .slide-text p {
     font-size: 1rem;
-    cursor: pointer;
   }
-  
-  .shop-now-button:hover,
-  .sign-up-button:hover {
-    background-color: #555;
-  }
-  
-  /* Positioning the arrows and pagination */
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: #333;
-    background-color: #fff;
-    border-radius: 50%;
-    padding: 10px;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    right: 20px; /* Adjust to move the buttons to the bottom-right */
-    bottom: 20px;
-  }
-  
-  .swiper-pagination {
-    position: absolute;
-    bottom: 10px;
-    right: 50px; /* Move the pagination dots close to the navigation arrows */
-  }
-  
-  .swiper-pagination-bullet {
-    background-color: #333;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: #fff;
-  }
-  
+}

@@ -1,5 +1,5 @@
 .food-list-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -10,6 +10,8 @@
     flex-wrap: wrap;
     gap: 30px; /* Adjust the gap between food items */
     justify-content: center;
+    margin-bottom: 20px; /* Adjust the space between footer and foodlist*/
+
 }
 
 .food-item {
